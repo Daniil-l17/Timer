@@ -11,8 +11,6 @@ interface time {
 function App() {
   const [timer, setTimer] = useState<time>({ ms: 0, sek: 0, min: 0, h: 0 });
   const [go, setGo] = useState(undefined);
-  const [dds,sasa]  = useState(true)
-  console.log(dds)
   
   const goInterv = () => {
 // @ts-ignore
