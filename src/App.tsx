@@ -11,11 +11,14 @@ interface time {
 function App() {
   const [timer, setTimer] = useState<time>({ ms: 0, sek: 0, min: 0, h: 0 });
   const [go, setGo] = useState(undefined);
-
+  const [dds,sasa]  = useState(true)
+  console.log(dds)
+  
   const goInterv = () => {
 // @ts-ignore
-    setGo(setInterval(goTimer, 10));
+    const interv = setGo(setInterval(goTimer, 10));
   };
+
 
   let ms = timer.ms;
   let sek = timer.sek;
@@ -36,7 +39,8 @@ function App() {
       min = 0;
       h += 1;
     }
-    setTimer({ ms, sek, min, h });
+    
+  setTimer({ms,sek,min,h})
   };
 
 
